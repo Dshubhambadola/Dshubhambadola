@@ -16,22 +16,15 @@ Crucially, we’ve engineered a "smart handover" protocol that ensures this info
   </a>
 </p>
 
-### 📊 Engineering Metrics
-<p align="left">
-  <!-- Switched to Streak Stats, which is more stable -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dshubhambadola&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
-  <br />
-  <!-- Kept standard stats but removed 'count_private' to fix the crash -->
-  <img src="https://github-readme-stats.vercel.app/api?username=Dshubhambadola&show_icons=true&theme=transparent&hide_border=true" alt="Shubham's GitHub stats" />
-</p>
-
-<br />
-
+### 🌐 Connect & Socials
 <p align="left">
   <a href="mailto:shubhambadola87@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/shubham-badola-07120b119/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://twitter.com/">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
   </a>
 </p>
