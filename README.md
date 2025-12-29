@@ -5,7 +5,7 @@
 
 In an era where assets are increasingly digital and fragmented, **Wallt** serves as the single source of truth. We enable users to consolidate all their assets—financial, legal, and personal—into a single, secure repository.
 
-Crucially, we’ve engineered a **"smart handover" protocol** that ensures this information seamlessly reaches loved ones exactly when they need it—and not a moment before.
+Crucially, we’ve engineered a "smart handover" protocol that ensures this information reaches loved ones seamlessly, exactly when they need it—and not a moment before.
 
 ---
 
