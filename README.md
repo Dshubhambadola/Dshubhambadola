@@ -18,9 +18,11 @@ Crucially, we’ve engineered a "smart handover" protocol that ensures this info
 
 ### 📊 Engineering Metrics
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dshubhambadola&show_icons=true&theme=transparent&hide_border=true&count_private=true" alt="Shubham's GitHub stats" />
+  <!-- Switched to Streak Stats, which is more stable -->
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dshubhambadola&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
   <br />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dshubhambadola&layout=compact&theme=transparent&hide_border=true" alt="Top Langs" />
+  <!-- Kept standard stats but removed 'count_private' to fix the crash -->
+  <img src="https://github-readme-stats.vercel.app/api?username=Dshubhambadola&show_icons=true&theme=transparent&hide_border=true" alt="Shubham's GitHub stats" />
 </p>
 
 <br />
