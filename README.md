@@ -9,30 +9,30 @@
 
 ---
 
-## 🏢 About Wallt
+## 🚀 Current Mission: Wallt
 
 **[Wallt](https://wallt.in)** is India's most comprehensive **legacy planning and digital vault platform**.
 
-In an era where assets are increasingly digital and fragmented—cryptocurrencies, digital documents, online accounts, investments, insurance policies—there's no unified way to manage and transfer this wealth. **Wallt solves this.**
+As Co-founder & CTO, I am addressing a critical gap in the financial ecosystem: the fragmentation of digital wealth and the complexity of inheritance.
 
-### 🎯 The Problem We're Solving
+### 🎯 The Problem
 
-- 📱 **Digital Asset Fragmentation**: People have assets scattered across 50+ platforms with no central view
-- 🔐 **Inaccessible Credentials**: Loved ones struggle to access accounts after unforeseen events
-- 📄 **Lost Documents**: Critical documents like wills, insurance policies, and property papers often go missing
-- ⏰ **Delayed Wealth Transfer**: Families face months of legal battles to access rightful inheritance
+- 📱 **Digital Asset Fragmentation**: Assets are scattered across 50+ platforms (crypto exchanges, banks, lockers) with no unified view.
+- 🔐 **Inaccessible Credentials**: Families lose access to millions in assets because credentials die with the owner.
+- ⏰ **Delayed Wealth Transfer**: Inheritance processes in India are archaic, often taking months or years of legal battles.
 
 ### 💡 Our Solution
 
 | Feature | Description |
 |---------|-------------|
-| **🏦 Digital Vault** | Secure, encrypted storage for all your critical documents, credentials, and digital assets |
-| **👥 Smart Nominees** | Designate trusted individuals who receive access at the right time |
-| **🤝 Smart Handover Protocol** | Engineered system that ensures information reaches loved ones seamlessly—exactly when needed, not a moment before |
-| **🔒 Bank-Grade Security** | End-to-end encryption with zero-knowledge architecture |
-| **📊 Asset Consolidation** | Single source of truth for financial, legal, and personal assets |
+| **🏦 Digital Vault** | A bank-grade encrypted repository for critical documents, credentials, and financial assets. |
+| **🤝 Smart Handover Protocol** | A proprietary "dead man's switch" ensuring information reaches nominees *only* when exigency criteria are met. |
+| **🔒 Zero-Knowledge Security** | Architected so that even we cannot access user data—privacy is mathematical, not just a promise. |
+| **👥 Smart Nominees** | Granular access control allowing users to designate specific assets to specific people. |
 
 ### 🏗️ Technical Architecture
+
+I architected Wallt as a secure, scalable, and event-driven platform:
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -70,6 +70,17 @@ In an era where assets are increasingly digital and fragmented—cryptocurrencie
 
 ---
 
+## 🧠 Engineering Leadership Philosophy
+
+As a CTO, I believe in building technology that serves the business, not just technology for technology's sake.
+
+- **Product-Centric Architecture**: Every line of code should solve a user problem or unlock a business opportunity.
+- **Scalability with Simplicity**: Complexity is the enemy of execution. I architect systems that are robust enough to scale but simple enough to maintain.
+- **Data-Driven Decision Making**: From infrastructure capacity to feature prioritisation, I rely on metrics and observability to guide technical strategy.
+- **Empowering Teams**: I foster cultures of ownership, where engineers are encouraged to understand the "why" behind the "what".
+
+---
+
 ## 👨‍💻 Professional Experience
 
 ### 🎯 Current Role
@@ -84,17 +95,16 @@ Building India's most comprehensive legacy planning and digital vault platform f
 </tr>
 </table>
 
-### 🚀 Previous Roles
+### 🚀 Career Journey
 
 <details>
 <summary><strong>🏗️ Head of Engineering (Contractual) — Connextra.io, Delhi</strong> <em>(Jan 2025 - Jun 2025)</em></summary>
 <br/>
 
-- Architected and launched a **scalable SaaS platform** delivering end-to-end workflow automation for clients across diverse industries
-- Integrated **40+ third-party services** as configurable triggers and actions, enabling complex multi-step workflows with minimal manual intervention
-- Designed and deployed a **microservices architecture on Google Cloud Platform** (Cloud Run, Cloud Tasks, Pub/Sub), ensuring high availability, fault tolerance, and performance under variable load
-- Developed an **intelligent data transformation pipeline** connecting varied data sources (e.g., Firestore, Google Sheets) with action endpoints (ChatGPT, SendGrid), empowering non-technical users to build advanced workflows
-- Trained and deployed **custom AI models** to auto-generate multiple workflow automations from a single user prompt, boosting efficiency and reducing setup time
+- **Strategic Leadership**: Architected and launched a scalable SaaS platform delivering end-to-end workflow automation for diverse industries.
+- **Integration Mastery**: Led the integration of **40+ third-party services** as configurable triggers, enabling complex multi-step workflows with minimal manual intervention.
+- **Cloud Architecture**: Designed a microservices architecture on **Google Cloud Platform (Cloud Run, Cloud Tasks, Pub/Sub)**, ensuring high availability and fault tolerance.
+- **AI Implementation**: Trained and deployed custom AI models to auto-generate workflow automations from single user prompts, significantly reducing setup time for non-technical users.
 
 </details>
 
@@ -102,10 +112,10 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>👔 Engineering Manager — Zen Admin, Singapore</strong> <em>(Sep 2022 - Dec 2024)</em></summary>
 <br/>
 
-- Built **two enterprise-grade products from the ground up**: a B2B eCommerce & procurement platform and a comprehensive HR management system
-- Trained **Amazon's Claude AI** on proprietary company data to develop a conversational chatbot enabling customers to configure a full procurement ecosystem with a single prompt
-- **Migrated core infrastructure** from Singapore to the EU region, transitioning critical services (EC2, RDS, S3, message queues, MongoDB) while implementing robust encryption and compliance controls
-- Developed a **full-featured HRIS module** with leave management, attendance tracking, custom field configuration, and automated Slack/email notifications—**boosting HR efficiency by 65%**
+- **Product Development**: Built two enterprise-grade products from scratch: a B2B eCommerce procurement platform and a comprehensive HR management system.
+- **AI & Innovation**: Leveraged **Amazon's Bedrock ** to build a conversational chatbot that configured full procurement ecosystems via natural language.
+- **Infrastructure Migration**: Successfully migrated core infrastructure from Singapore to the EU region (EC2, RDS, S3, MongoDB), implementing robust encryption and compliance controls.
+- **Impact**: Developed a full-featured HRIS module that boosted HR efficiency by **65%** through automated notifications and custom field configurations.
 
 </details>
 
@@ -113,10 +123,9 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🎖️ Tech Lead — Stack, Bangalore</strong> <em>(Oct 2020 - Sep 2022)</em></summary>
 <br/>
 
-- Designed and built **scalable systems from the ground up**, including advanced database applications (data partitions, global temp tables, function-based indexes) and backend architecture for efficient data access and high performance
-- Led a **10-member engineering team** to develop a high-throughput system processing **50,000+ requests per second**, leveraging Node.js, Go, Kafka, Redis, ECS, and ECR
-- Developed **enterprise-grade platforms** to streamline corporate operations, enable cloud migrations, and support enterprise-scale architectures with strong performance and security practices
-- Executed **performance tuning, security analysis, and compatibility testing**, consistently delivering production-ready software on aggressive timelines
+- **Scale**: Led a 10-member team to develop a high-throughput system processing **50,000+ requests per second**.
+- **Architecture**: Designed scalable backend systems using Node.js, Go, Kafka, and Redis, utilising advanced database techniques (partitioning, function-based indexes).
+- **Enterprise Readiness**: Delivered platforms enabling corporate cloud migrations with a strong focus on security analysis and performance tuning.
 
 </details>
 
@@ -124,11 +133,9 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>💼 Software Engineer — BYJU'S (via Wyzebulb acquisition), Bangalore</strong> <em>(Oct 2019 - Oct 2020)</em></summary>
 <br/>
 
-- Redesigned **BYJU's monolithic architecture** into a scalable microservices-based system, including critical modules such as the Loan Management System (LMS) and Post Order Management System (POMS)
-- Implemented an **event-driven architecture** using the choreography saga pattern, ensuring seamless coordination across distributed services
-- Integrated with **leading financial partners** (ICICI, HDFC) to enable real-time loan processing and status tracking
-- **Dockerized the entire system** for environment consistency and deployed on **AWS ECS** to achieve scalable container orchestration
-- **Tech Stack**: Node.js, Golang, Kafka, Redis, MongoDB, Docker, Elasticsearch, Kibana, Logstash, AWS
+- **Modernization**: Redesigned BYJU's monolithic architecture into a scalable **microservices system**, including the Loan Management System.
+- **Pattern Implementation**: Implemented **event-driven architecture** using the choreography saga pattern for seamless distributed service coordination.
+- **DevOps**: Dockerized the entire system and deployed on **AWS ECS** for scalable orchestration.
 
 </details>
 
@@ -136,11 +143,9 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🔧 Software Engineer — Wyzebulb, Bangalore</strong> <em>(Nov 2018 - Oct 2019)</em></summary>
 <br/>
 
-- Architected the **core system** for the company's flagship service—automating complex workflows by connecting data across thousands of third-party apps (e.g., syncing Facebook comments/likes to Google Sheets)
-- Implemented **error monitoring and alerting systems** to ensure API reliability and proactively detect integration failures across the automation pipeline
-- Developed **internal dashboards** to track profit/loss, service usage, and operational costs, providing real-time visibility for strategic decision-making
-- Automated the **deployment pipeline using Jenkins**, enabling continuous integration and faster release cycles
-- **Tech Stack**: Node.js, Redis, MongoDB, Kafka, Elasticsearch, Logstash
+- **Core Logic**: Architected the flagship automation service connecting data across thousands of third-party apps.
+- **Reliability**: Implemented comprehensive error monitoring and alerting systems to ensure API reliability.
+- **Observability**: Built internal dashboards for real-time tracking of profit/loss and service usage.
 
 </details>
 
@@ -148,8 +153,7 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🏥 Software Engineer — Medibox, Bangalore</strong> <em>(Jan 2016 - Oct 2018)</em></summary>
 <br/>
 
-- Developed a **unified notification system** enabling one-click delivery of SMS, email, and mobile push notifications to **55,000+ customers**, leveraging OneSignal API and Firebase
-- Built and maintained an **order management system** to streamline order processing and enable real-time inventory updates, improving customer experience
+- **Systems**: Developed a unified notification system impacting **55,000+ customers** and an order management system for real-time inventory updates.
 
 </details>
 
@@ -175,18 +179,15 @@ Building India's most comprehensive legacy planning and digital vault platform f
   </a>
 </p>
 
-### 🧰 Tech Stack Breakdown
-
-| Category | Technologies |
-|----------|--------------|
+| Domain | Technologies |
+|--------|--------------|
+| **Leadership** | Team Building, Agile/Scrum, System Design, Mentorship, Strategic Planning |
 | **Languages** | Go, Python, JavaScript, TypeScript |
-| **Backend** | Node.js, Express.js, Golang |
+| **Backend** | Node.js, Express.js, Golang, Microservices |
 | **Frontend** | React, Next.js, React Native |
-| **Databases** | MySQL, PostgreSQL, Redis |
-| **Message Queues** | Kafka, RabbitMQ |
-| **Cloud & DevOps** | AWS (ECS, EC2, S3, RDS, Lambda), GCP (Cloud Run, Cloud Tasks), Docker, Kubernetes |
-| **Data & Search** | Elasticsearch, Apache Airflow, Apache Flink |
-| **Monitoring** | Kibana, Logstash, Grafana |
+| **Databases** | MySQL, PostgreSQL, Redis, MongoDB |
+| **Infrastructure** | AWS, GCP, Docker, Kubernetes, Terraform |
+| **Data & Events** | Kafka, RabbitMQ, Elasticsearch, Apache Airflow |
 
 ---
 
@@ -225,5 +226,4 @@ Andhra University • *2011 - 2015*
 ---
 
 <p align="center">
-  <em>💡 "Building technology that outlasts us, so our legacy reaches those who matter most."</em>
-</p>
+  <em>💡 "Legacy is not what you leave for people. It’s what you leave in people."</em>
