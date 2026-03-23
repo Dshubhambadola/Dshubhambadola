@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://wallt.in"><img src="https://img.shields.io/badge/🚀_Wallt-Visit_Website-6366F1?style=for-the-badge" /></a>
+  <a href="https://www.linkedin.com/in/shubham-badola-07120b119/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <img src="https://komarev.com/ghpvc/?username=shubhambadola&style=for-the-badge&color=6366F1" alt="Profile Views" />
 </p>
 
@@ -13,71 +14,124 @@
 
 **[Wallt](https://wallt.in)** is India's most comprehensive **legacy planning and digital vault platform**.
 
-As Co-founder & CTO, I am addressing a critical gap in the financial ecosystem: the fragmentation of digital wealth and the complexity of inheritance.
+As Co-founder & CTO, I'm addressing a critical gap in the financial ecosystem: the fragmentation of digital wealth and the complexity of inheritance.
 
 ### 🎯 The Problem
 
-- 📱 **Digital Asset Fragmentation**: Assets are scattered across 50+ platforms (crypto exchanges, banks, lockers) with no unified view.
-- 🔐 **Inaccessible Credentials**: Families lose access to millions in assets because credentials die with the owner.
-- ⏰ **Delayed Wealth Transfer**: Inheritance processes in India are archaic, often taking months or years of legal battles.
+- 📱 **Digital Asset Fragmentation** — Assets scattered across 50+ platforms with no unified view
+- 🔐 **Inaccessible Credentials** — Families lose access to millions because credentials die with the owner
+- ⏰ **Delayed Wealth Transfer** — Inheritance in India is archaic, often taking months of legal battles
 
 ### 💡 Our Solution
 
 | Feature | Description |
 |---------|-------------|
-| **🏦 Digital Vault** | A bank-grade encrypted repository for critical documents, credentials, and financial assets. |
-| **🤝 Smart Handover Protocol** | A proprietary "dead man's switch" ensuring information reaches nominees *only* when exigency criteria are met. |
-| **🔒 Zero-Knowledge Security** | Architected so that even we cannot access user data—privacy is mathematical, not just a promise. |
-| **👥 Smart Nominees** | Granular access control allowing users to designate specific assets to specific people. |
+| **🏦 Digital Vault** | Bank-grade encrypted repository for documents, credentials, and financial assets |
+| **🤝 Smart Handover** | A proprietary "dead man's switch" ensuring information reaches nominees *only* when exigency criteria are met |
+| **🔒 Zero-Knowledge Security** | Architected with AWS Nitro Enclaves + KMS — even we cannot access user data |
+| **👥 Smart Nominees** | Granular access control — designate specific assets to specific people |
 
-### 🏗️ Technical Architecture
+---
 
-I architected Wallt as a secure, scalable, and event-driven platform:
+## 🏗️ Technical Architecture
+
+I architect Wallt as a secure, event-driven platform with **hardware-level encryption isolation**:
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│                        Wallt Platform                            │
-├──────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
-│  │   Web App   │  │ Mobile App  │  │  Admin CRM  │              │
-│  │   (React)   │  │(React Native)│  │   (React)   │              │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘              │
-│         └────────────────┼────────────────┘                      │
-│                          ▼                                       │
-│  ┌───────────────────────────────────────────────────────────┐  │
-│  │              API Gateway & Load Balancer                   │  │
-│  └───────────────────────────────────────────────────────────┘  │
-│                          ▼                                       │
-│  ┌───────────────────────────────────────────────────────────┐  │
-│  │           Node.js Microservices (Express.js)              │  │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐     │  │
-│  │  │   Auth   │ │  Vault   │ │ Nominees │ │  Notify  │     │  │
-│  │  │ Service  │ │ Service  │ │ Service  │ │ Service  │     │  │
-│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘     │  │
-│  └───────────────────────────────────────────────────────────┘  │
-│                          ▼                                       │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
-│  │    MySQL    │  │    Redis    │  │    Kafka    │              │
-│  │  (Primary)  │  │   (Cache)   │  │  (Events)   │              │
-│  └─────────────┘  └─────────────┘  └─────────────┘              │
-│                          ▼                                       │
-│  ┌───────────────────────────────────────────────────────────┐  │
-│  │                   AWS Cloud Infrastructure                 │  │
-│  │        ECS • S3 • CloudFront • Route53 • SES              │  │
-│  └───────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Wallt Platform                                 │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│   ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌───────────┐  │
+│   │  Web App     │  │  Mobile App  │  │  Admin CRM   │  │  Website  │  │
+│   │  Next.js 13  │  │  Expo / RN   │  │  React+Vite  │  │ Chakra UI │  │
+│   └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  └─────┬─────┘  │
+│          └─────────────────┼─────────────────┘               │         │
+│                            ▼                                 │         │
+│   ┌──────────────────────────────────────────────────────────┘         │
+│   │                                                                    │
+│   ▼                         API Layer                                  │
+│   ┌────────────────────────────────────────────────────────────────┐   │
+│   │               Hapi.js API + JWT Auth + Socket.io               │   │
+│   │   ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │   │
+│   │   │   Auth   │ │  Vault   │ │ Nominees │ │    Payments      │ │   │
+│   │   │ Service  │ │ Service  │ │ Service  │ │   (Razorpay)     │ │   │
+│   │   └──────────┘ └──────────┘ └──────────┘ └──────────────────┘ │   │
+│   └────────────────────────────────────────────────────────────────┘   │
+│                            │                                           │
+│              ┌─────────────┼──────────────┐                            │
+│              ▼             ▼              ▼                             │
+│   ┌──────────────┐ ┌────────────┐ ┌────────────┐                      │
+│   │    MySQL     │ │   Agenda   │ │  Google    │                      │
+│   │  (Sequelize) │ │  (Jobs)    │ │  Pub/Sub   │                      │
+│   └──────────────┘ └────────────┘ └────────────┘                      │
+│                                                                        │
+│   ╔════════════════════════════════════════════════════════════════╗   │
+│   ║              🔐 Zero-Knowledge Enclave (Go)                    ║   │
+│   ║                                                                ║   │
+│   ║   AWS Nitro Enclaves  ←→  KMS Attestation  ←→  TimeLock       ║   │
+│   ║   Encrypted key recovery that even Wallt cannot access         ║   │
+│   ╚════════════════════════════════════════════════════════════════╝   │
+│                                                                        │
+│   ┌────────────────────────────────────────────────────────────────┐   │
+│   │                  AWS Cloud Infrastructure                      │   │
+│   │      ECS • S3 • CloudFront • Route53 • SES • Nitro Enclaves   │   │
+│   └────────────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🤖 KIRA — AI Developer Agent
+
+I built **KIRA** (Kode Intelligence & Review Agent), an autonomous AI developer that handles tickets end-to-end:
+
+```
+   Jira Ticket Assigned to KIRA
+            │
+            ▼
+   ┌─────────────────┐     ┌──────────────────────────┐
+   │  Clarity Check  │────▶│  Semantic Codebase Search │
+   │  (Claude AI)    │     │  Qdrant + Ollama Embeds   │
+   └────────┬────────┘     └──────────────────────────┘
+            │
+     confidence ≥ 60?
+      ╱          ╲
+    YES           NO → Post questions to Jira, pause
+     │
+     ▼
+   ┌─────────────────┐
+   │  Code Generation │─── Patch Mode (93% fewer tokens)
+   │  (Claude Sonnet) │─── AST-aware file selection
+   └────────┬────────┘    Learned patterns from past PRs
+            │
+            ▼
+   ┌─────────────────┐
+   │   Verification   │─── Auto-fixes flagged issues
+   │   Pass           │─── Re-generates if needed
+   └────────┬────────┘
+            │
+            ▼
+   Branch → Commit → PR → Reviewer assigned
+            │
+            ▼
+   CodeRabbit reviews → KIRA auto-fixes → Merge-ready
+```
+
+**Key engineering decisions:**
+- **SQLite crash recovery** — checkpoints at every stage, resumes from where it left off
+- **Patch-mode output** — surgical hunks instead of full files, reducing output tokens by 93%
+- **AST-aware code chunking** — Babel parser extracts function/class/route-level chunks for semantic search
+- **Semantic reranking** — Claude reranks vector search results for precision file selection
 
 ---
 
 ## 🧠 Engineering Leadership Philosophy
 
-As a CTO, I believe in building technology that serves the business, not just technology for technology's sake.
-
-- **Product-Centric Architecture**: Every line of code should solve a user problem or unlock a business opportunity.
-- **Scalability with Simplicity**: Complexity is the enemy of execution. I architect systems that are robust enough to scale but simple enough to maintain.
-- **Data-Driven Decision Making**: From infrastructure capacity to feature prioritisation, I rely on metrics and observability to guide technical strategy.
-- **Empowering Teams**: I foster cultures of ownership, where engineers are encouraged to understand the "why" behind the "what".
+- **Product-Centric Architecture** — Every line of code should solve a user problem or unlock a business opportunity
+- **Scalability with Simplicity** — Complexity is the enemy of execution. Systems should be robust enough to scale but simple enough to maintain
+- **Data-Driven Decisions** — From infrastructure capacity to feature prioritisation, metrics and observability guide strategy
+- **Empowering Teams** — Cultures of ownership where engineers understand the "why" behind the "what"
 
 ---
 
@@ -101,10 +155,10 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🏗️ Head of Engineering (Contractual) — Connextra.io, Delhi</strong> <em>(Jan 2025 - Jun 2025)</em></summary>
 <br/>
 
-- **Strategic Leadership**: Architected and launched a scalable SaaS platform delivering end-to-end workflow automation for diverse industries.
-- **Integration Mastery**: Led the integration of **40+ third-party services** as configurable triggers, enabling complex multi-step workflows with minimal manual intervention.
-- **Cloud Architecture**: Designed a microservices architecture on **Google Cloud Platform (Cloud Run, Cloud Tasks, Pub/Sub)**, ensuring high availability and fault tolerance.
-- **AI Implementation**: Trained and deployed custom AI models to auto-generate workflow automations from single user prompts, significantly reducing setup time for non-technical users.
+- **Strategic Leadership**: Architected a scalable SaaS platform delivering end-to-end workflow automation
+- **Integration Mastery**: Led integration of **40+ third-party services** as configurable triggers
+- **Cloud Architecture**: Microservices on **GCP (Cloud Run, Cloud Tasks, Pub/Sub)** with high availability
+- **AI Implementation**: Custom AI models to auto-generate workflow automations from user prompts
 
 </details>
 
@@ -112,10 +166,10 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>👔 Engineering Manager — Zen Admin, Singapore</strong> <em>(Sep 2022 - Dec 2024)</em></summary>
 <br/>
 
-- **Product Development**: Built two enterprise-grade products from scratch: a B2B eCommerce procurement platform and a comprehensive HR management system.
-- **AI & Innovation**: Leveraged **Amazon's Bedrock ** to build a conversational chatbot that configured full procurement ecosystems via natural language.
-- **Infrastructure Migration**: Successfully migrated core infrastructure from Singapore to the EU region (EC2, RDS, S3, MongoDB), implementing robust encryption and compliance controls.
-- **Impact**: Developed a full-featured HRIS module that boosted HR efficiency by **65%** through automated notifications and custom field configurations.
+- **Product Development**: Built two enterprise products from scratch: B2B eCommerce procurement platform + HR management system
+- **AI & Innovation**: Built a conversational chatbot using **Amazon Bedrock** that configured procurement ecosystems via natural language
+- **Infrastructure Migration**: Migrated core infra from Singapore to EU (EC2, RDS, S3, MongoDB) with encryption and compliance controls
+- **Impact**: HRIS module boosted HR efficiency by **65%** through automated notifications and custom configurations
 
 </details>
 
@@ -123,19 +177,19 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🎖️ Tech Lead — Stack, Bangalore</strong> <em>(Oct 2020 - Sep 2022)</em></summary>
 <br/>
 
-- **Scale**: Led a 10-member team to develop a high-throughput system processing **50,000+ requests per second**.
-- **Architecture**: Designed scalable backend systems using Node.js, Go, Kafka, and Redis, utilising advanced database techniques (partitioning, function-based indexes).
-- **Enterprise Readiness**: Delivered platforms enabling corporate cloud migrations with a strong focus on security analysis and performance tuning.
+- **Scale**: Led 10-member team developing a system processing **50,000+ requests per second**
+- **Architecture**: Designed backends using Node.js, Go, Kafka, and Redis with advanced DB techniques (partitioning, function-based indexes)
+- **Enterprise Readiness**: Delivered platforms enabling corporate cloud migrations with security analysis and performance tuning
 
 </details>
 
 <details>
-<summary><strong>💼 Software Engineer — BYJU'S (via Wyzebulb acquisition), Bangalore</strong> <em>(Oct 2019 - Oct 2020)</em></summary>
+<summary><strong>💼 Software Engineer — BYJU'S (via Wyzebulb acquisition)</strong> <em>(Oct 2019 - Oct 2020)</em></summary>
 <br/>
 
-- **Modernization**: Redesigned BYJU's monolithic architecture into a scalable **microservices system**, including the Loan Management System.
-- **Pattern Implementation**: Implemented **event-driven architecture** using the choreography saga pattern for seamless distributed service coordination.
-- **DevOps**: Dockerized the entire system and deployed on **AWS ECS** for scalable orchestration.
+- Redesigned BYJU's monolithic architecture into a scalable **microservices system**
+- Implemented **event-driven architecture** using the choreography saga pattern
+- Dockerized and deployed on **AWS ECS** for scalable orchestration
 
 </details>
 
@@ -143,9 +197,8 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🔧 Software Engineer — Wyzebulb, Bangalore</strong> <em>(Nov 2018 - Oct 2019)</em></summary>
 <br/>
 
-- **Core Logic**: Architected the flagship automation service connecting data across thousands of third-party apps.
-- **Reliability**: Implemented comprehensive error monitoring and alerting systems to ensure API reliability.
-- **Observability**: Built internal dashboards for real-time tracking of profit/loss and service usage.
+- Architected the flagship automation service connecting data across thousands of third-party apps
+- Built comprehensive error monitoring, alerting systems, and real-time internal dashboards
 
 </details>
 
@@ -153,7 +206,8 @@ Building India's most comprehensive legacy planning and digital vault platform f
 <summary><strong>🏥 Software Engineer — Medibox, Bangalore</strong> <em>(Jan 2016 - Oct 2018)</em></summary>
 <br/>
 
-- **Systems**: Developed a unified notification system impacting **55,000+ customers** and an order management system for real-time inventory updates.
+- Developed a unified notification system impacting **55,000+ customers**
+- Built order management system for real-time inventory updates
 
 </details>
 
@@ -181,13 +235,15 @@ Building India's most comprehensive legacy planning and digital vault platform f
 
 | Domain | Technologies |
 |--------|--------------|
-| **Leadership** | Team Building, Agile/Scrum, System Design, Mentorship, Strategic Planning |
-| **Languages** | Go, Python, JavaScript, TypeScript |
-| **Backend** | Node.js, Express.js, Golang, Microservices |
-| **Frontend** | React, Next.js, React Native |
-| **Databases** | MySQL, PostgreSQL, Redis, MongoDB |
-| **Infrastructure** | AWS, GCP, Docker, Kubernetes, Terraform |
-| **Data & Events** | Kafka, RabbitMQ, Elasticsearch, Apache Airflow |
+| **Leadership** | Team Building, Agile/Scrum, System Design, Mentorship |
+| **Languages** | Go, JavaScript, TypeScript, Python |
+| **Backend** | Hapi.js, Express.js, Node.js, Microservices |
+| **Frontend** | React, Next.js, React Native (Expo), Chakra UI |
+| **AI/ML** | Claude AI (Anthropic), Ollama, Qdrant Vector DB, Amazon Bedrock |
+| **Databases** | MySQL, PostgreSQL, Redis, MongoDB, SQLite |
+| **Infrastructure** | AWS (ECS, S3, Nitro Enclaves, KMS), GCP, Docker, Kubernetes |
+| **Events & Jobs** | Google Pub/Sub, Kafka, Agenda, Socket.io |
+| **Payments & Comms** | Razorpay, SendGrid, Twilio, FCM |
 
 ---
 
@@ -226,4 +282,5 @@ Andhra University • *2011 - 2015*
 ---
 
 <p align="center">
-  <em>💡 "Legacy is not what you leave for people. It’s what you leave in people."</em>
+  <em>"Legacy is not what you leave for people. It's what you leave in people."</em>
+</p>
